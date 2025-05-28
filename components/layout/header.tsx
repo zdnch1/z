@@ -13,6 +13,7 @@ import {
   Info 
 } from "lucide-react";
 import { ModeToggle } from "@/components/mode-toggle";
+import { LanguageSwitcher } from "@/components/language-switcher";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -61,13 +62,17 @@ export default function Header() {
             Tentang Kami
           </Link>
         </nav>
-
+        
         {/* Desktop Right Section */}
         <div className="hidden md:flex items-center space-x-4">
           <ModeToggle />
           <Button>Konsultasi Gratis</Button>
         </div>
-
+        <div className="flex items-center space-x-4">
+  <LanguageSwitcher />
+  <ModeToggle />
+  <Button>Konsultasi Gratis</Button>
+</div>
         {/* Mobile Menu Button */}
         <div className="flex md:hidden items-center gap-2">
           <ModeToggle />
